@@ -1,0 +1,919 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عرض خاص - ✓ مواصلات</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="translations.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-wrapper">
+                <!-- Logo -->
+                <div class="logo">
+                    <div class="logo-icon">
+                        <svg viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Kaaba Icon -->
+                            <rect x="15" y="20" width="20" height="20" fill="white" opacity="0.9" />
+                            <rect x="17" y="22" width="16" height="16" fill="none" stroke="white" stroke-width="1" />
+                            <path d="M 25 10 L 10 20 L 40 20 Z" fill="white" opacity="0.8" />
+                            <circle cx="25" cy="30" r="2" fill="#FFD700" />
+                            <line x1="20" y1="25" x2="30" y2="25" stroke="#FFD700" stroke-width="1" />
+                            <line x1="20" y1="35" x2="30" y2="35" stroke="#FFD700" stroke-width="1" />
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <h1 data-translate="logoTitle">باقات السكن</h1>
+                        <span data-translate="logoSubtitle">مكة والمدينة</span>
+                    </div>
+                </div>
+
+                <!-- Center Navigation -->
+                <nav class="main-nav">
+                    <a href="#programs-bed" data-translate="navBed">برامج - بالسرير</a>
+                    <a href="#programs-room" data-translate="navRoom">برامج - بالغرفة</a>
+                    <a href="#makkah-hotel" data-translate="navMakkah">سكن فندقي بمكة</a>
+                    <a href="#madinah" data-translate="navMadinah">السكن بالمدينة</a>
+                </nav>
+
+                <!-- Right Side: Social Media & Language -->
+                <div class="header-right">
+                    <!-- Social Media Icons -->
+                    <div class="social-icons">
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <!-- Language Switcher -->
+                    <div class="language-switcher">
+                        <button class="lang-btn" id="langBtn">
+                            <span id="currentLangText">العربية</span>
+                            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="6 9 12 15 18 9"></polyline>
+                            </svg>
+                        </button>
+                        <div class="lang-dropdown" id="langDropdown">
+                            <a href="#" class="lang-option active" data-lang="ar" data-dir="rtl">
+                                <span>العربية</span>
+                                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </a>
+                            <a href="#" class="lang-option" data-lang="en" data-dir="ltr">
+                                <span>English</span>
+                                <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <polyline points="20 6 9 17 4 12"></polyline>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Background Image -->
+    <section class="hero-banner">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <span class="hero-welcome">مرحباً بكم</span>
+                <h1>باقات السكن في مكة والمدينة</h1>
+                <p>نوفر لكم أفضل باقات الإقامة في الأماكن المقدسة مع خدمات متميزة</p>
+                <div class="hero-buttons">
+                    <a href="#programs-bed" class="btn-primary">استكشف الباقات</a>
+                    <a href="#contact" class="btn-secondary">تواصل معنا</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: باقات البرامج - السعر بالسرير للفرد + المواصلات -->
+    <section class="packages" id="programs-bed">
+        <div class="container">
+            <h2 class="section-title" data-translate="sectionBed">باقات البرامج - السعر بالسرير للفرد + المواصلات</h2>
+        <div class="packages-grid">
+            <!-- 8 Packages for Section 1 -->
+            <div class="package-card">
+                <div class="package-image">
+                    <img src="images/1.jfif" alt="باقة 1">
+                    <span class="package-badge">عرض خاص</span>
+                </div>
+                <div class="package-content">
+                    <h3>باقة البرنامج الاقتصادية</h3>
+                    <p class="package-location">📍 مكة والمدينة</p>
+                    <p class="package-description">برنامج 7 أيام - سرير في غرفة مشتركة + مواصلات</p>
+                    <div class="package-features">
+                        <span>✓ إفطار مجاني</span>
+                        <span>✓ مواصلات من وإلى المطار</span>
+                        <span>✓ قريب من الحرم</span>
+                    </div>
+                    <div class="package-footer">
+                        <div class="package-price">
+                            <span class="price">1,200 ريال</span>
+                            <span class="per">للفرد / السرير</span>
+                        </div>
+                        <button class="book-btn">احجز الآن</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="package-image">
+                    <img src="images/2.jfif" alt="باقة 2">
+                </div>
+                <div class="package-content">
+                    <h3>باقة البرنامج الذهبية</h3>
+                    <p class="package-location">📍 مكة والمدينة</p>
+                    <p class="package-description">برنامج 7 أيام - سرير في غرفة مشتركة + مواصلات</p>
+                    <div class="package-features">
+                        <span>✓ إطلالة رائعة</span>
+                        <span>✓ مواصلات VIP</span>
+                        <span>✓ إطلالة رائعة</span>
+                    </div>
+                    <div class="package-footer">
+                        <div class="package-price">
+                            <span class="price">1,600 ريال</span>
+                            <span class="per">للفرد / السرير</span>
+                        </div>
+                        <button class="book-btn">احجز الآن</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="package-image">
+                    <img src="images/3.jfif" alt="باقة 3">
+                    <span class="package-badge">الأكثر مبيعاً</span>
+                </div>
+                <div class="package-content">
+                    <h3>باقة البرنامج الذهبية</h3>
+                    <p class="package-location">📍 مكة والمدينة</p>
+                    <p class="package-description">برنامج 10 أيام - سرير في غرفة مشتركة + مواصلات</p>
+                    <div class="package-features">
+                        <span>✓ جميع الوجبات</span>
+                        <span>✓ مواصلات فاخرة</span>
+                        <span>✓ خدمة 24 ساعة</span>
+                    </div>
+                    <div class="package-footer">
+                        <div class="package-price">
+                            <span class="price">2,200 ريال</span>
+                            <span class="per">للفرد / السرير</span>
+                        </div>
+                        <button class="book-btn">احجز الآن</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="package-image">
+                    <img src="images/4.jfif" alt="باقة 4">
+                </div>
+                <div class="package-content">
+                    <h3>باقة البرنامج الذهبية</h3>
+                    <p class="package-location">📍 مكة والمدينة</p>
+                    <p class="package-description">برنامج 14 يوم - سرير في غرفة مشتركة + مواصلات</p>
+                    <div class="package-features">
+                        <span>✓ خدمة VIP كاملة</span>
+                        <span>✓ سيارة خاصة</span>
+                        <span>✓ غرف فاخرة</span>
+                    </div>
+                    <div class="package-footer">
+                        <div class="package-price">
+                            <span class="price">3,500 ريال</span>
+                            <span class="per">للفرد / السرير</span>
+                        </div>
+                        <button class="book-btn">احجز الآن</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="package-image">
+                    <img src="images/5.jfif" alt="باقة 5">
+                </div>
+                <div class="package-content">
+                    <h3>باقة البرنامج الذهبية</h3>
+                    <p class="package-location">📍 مكة والمدينة</p>
+                    <p class="package-description">برنامج 5 أيام - سرير في غرفة مشتركة + مواصلات</p>
+                    <div class="package-features">
+                        <span>✓ تجربة فريدة</span>
+                        <span>✓ مواصلات فاخرة</span>
+                        <span>✓ برنامج مكثف</span>
+                    </div>
+                    <div class="package-footer">
+                        <div class="package-price">
+                            <span class="price">950 ريال</span>
+                            <span class="per">للفرد / السرير</span>
+                        </div>
+                        <button class="book-btn">احجز الآن</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="package-image">
+                    <img src="images/6.jfif" alt="باقة 6">
+                    <span class="package-badge">ريال</span>
+                </div>
+                <div class="package-content">
+                    <h3>باقة البرنامج الذهبية</h3>
+                    <p class="package-location">📍 مكة والمدينة</p>
+                    <p class="package-description">برنامج 10 أيام - سرير في غرفة مشتركة + مواصلات</p>
+                    <div class="package-features">
+                        <span>✓ إطلالة رائعة</span>
+                        <span>✓ تجربة فريدة</span>
+                        <span>✓ مواصلات فاخرة</span>
+                    </div>
+                    <div class="package-footer">
+                        <div class="package-price">
+                            <span class="price">2,000 ريال</span>
+                            <span class="per">للفرد / السرير</span>
+                        </div>
+                        <button class="book-btn">احجز الآن</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="package-image">
+                    <img src="images/7.jfif" alt="باقة 7">
+                </div>
+                <div class="package-content">
+                    <h3>باقة البرنامج الذهبية</h3>
+                    <p class="package-location">📍 مكة والمدينة</p>
+                    <p class="package-description">برنامج 12 يوم - سرير في غرفة مشتركة + مواصلات</p>
+                    <div class="package-features">
+                        <span> ✓ غرف فاخرة</span>
+                        <span>✓ تجربة فريدة</span>
+                        <span>✓ تجربة فريدة</span>
+                    </div>
+                    <div class="package-footer">
+                        <div class="package-price">
+                            <span class="price">2,800 ريال</span>
+                            <span class="per">للفرد / السرير</span>
+                        </div>
+                        <button class="book-btn">احجز الآن</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="package-card">
+                <div class="package-image">
+                    <img src="images/8.jfif" alt="باقة 8">
+                    <span class="package-badge">ريال</span>
+                </div>
+                <div class="package-content">
+                    <h3>باقة البرنامج الذهبية</h3>
+                    <p class="package-location">📍 مكة والمدينة</p>
+                    <p class="package-description">برنامج 15 يوم - سرير في غرفة مشتركة + مواصلات</p>
+                    <div class="package-features">
+                        <span>✓ خدمة 5 نجوم</span>
+                        <span>✓ مواصلات فاخرة</span>
+                        <span>✓ تجربة فريدةريال</span>
+                    </div>
+                    <div class="package-footer">
+                        <div class="package-price">
+                            <span class="price">4,200 ريال</span>
+                            <span class="per">للفرد / السرير</span>
+                        </div>
+                        <button class="book-btn">احجز الآن</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <!-- Section 2: عرض خاص - ريال✓ مواصلات + ريالريال -->
+    <section class="packages" id="programs-room">
+        <div class="container">
+            <h2 class="section-title" data-translate="sectionRoom">باقات البرامج - السعر بالغرفة + المواصلات</h2>
+            <div class="packages-grid">
+                <!-- 8 Packages for Section 2 -->
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="images/9.jfif" alt="باقة 1">
+                    </div>
+                    <div class="package-content">
+                        <h3>غرفة برنامج - شاملة</h3>
+                        <p class="package-location">📍 مكة والمدينة</p>
+                        <p class="package-description">برنامج 7 أيام - غرفة خاصة + مواصلات</p>
+                        <div class="package-features">
+                            <span>✓ خدمة فاخرة</span>
+                            <span>✓ تجربة فريدة</span>
+                            <span>✓ مواصلات</span>
+                        </div>
+                        <div class="package-footer">
+                            <div class="package-price">
+                                <span class="price">3,200 ريال</span>
+                                <span class="per">ريال</span>
+                            </div>
+                            <button class="book-btn">احجز الآن</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="images/10.jfif" alt="باقة 2">
+                        <span class="package-badge">ريال </span>
+                    </div>
+                    <div class="package-content">
+                        <h3>غرفة برنامج - شاملة</h3>
+                        <p class="package-location">📍 مكة والمدينة</p>
+                        <p class="package-description">برنامج 7 أيام - غرفة خاصة + مواصلات</p>
+                        <div class="package-features">
+                            <span>✓ خدمة فاخرة</span>
+                            <span>✓ إطلالة رائعة</span>
+                            <span>✓ مواصلات VIP</span>
+                        </div>
+                        <div class="package-footer">
+                            <div class="package-price">
+                                <span class="price">4,800 ريال</span>
+                                <span class="per">ريال</span>
+                            </div>
+                            <button class="book-btn">احجز الآن</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="images/11.jfif" alt="باقة 3">
+                    </div>
+                    <div class="package-content">
+                        <h3>غرفة برنامج - شاملة</h3>
+                        <p class="package-location">📍 مكة والمدينة</p>
+                        <p class="package-description">برنامج 10 أيام - غرفة خاصة + مواصلات</p>
+                        <div class="package-features">
+                            <span>✓ خدمة جيدة</span>
+                            <span>✓ جميع الوجبات</span>
+                            <span>✓ خدمة فاخرة</span>
+                        </div>
+                        <div class="package-footer">
+                            <div class="package-price">
+                                <span class="price">7,200 ريال</span>
+                                <span class="per">ريال</span>
+                            </div>
+                            <button class="book-btn">احجز الآن</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="images/12.jfif" alt="باقة 4">
+                        <span class="package-badge">ريال</span>
+                    </div>
+                    <div class="package-content">
+                        <h3>غرفة برنامج - شاملة</h3>
+                        <p class="package-location">📍 مكة والمدينة</p>
+                        <p class="package-description">برنامج 14 يوم - غرفة خاصة + مواصلات</p>
+                        <div class="package-features">
+                            <span>✓ خدمة جيدة</span>
+                            <span>✓ خدمة VIP</span>
+                            <span>✓ سيارة خاصة</span>
+                        </div>
+                        <div class="package-footer">
+                            <div class="package-price">
+                                <span class="price">11,500 ريال</span>
+                                <span class="per">ريال</span>
+                            </div>
+                            <button class="book-btn">احجز الآن</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="images/13.jfif" alt="باقة 5">
+                    </div>
+                    <div class="package-content">
+                        <h3>غرفة برنامج - شاملة</h3>
+                        <p class="package-location">📍 مكة والمدينة</p>
+                        <p class="package-description">برنامج 5 أيام - غرفة خاصة + مواصلات</p>
+                        <div class="package-features">
+                            <span>✓ خدمة فاخرة</span>
+                            <span>✓ تجربة فريدة</span>
+                            <span>✓ مواصلات فاخرة</span>
+                        </div>
+                        <div class="package-footer">
+                            <div class="package-price">
+                                <span class="price">2,600 ريال</span>
+                                <span class="per">ريال</span>
+                            </div>
+                            <button class="book-btn">احجز الآن</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="images/14.jfif" alt="باقة 6">
+                        <span class="package-badge">ريال</span>
+                    </div>
+                    <div class="package-content">
+                        <h3>غرفة برنامج - شاملة</h3>
+                        <p class="package-location">📍 مكة والمدينة</p>
+                        <p class="package-description">برنامج 10 أيام - غرفة خاصة + مواصلات</p>
+                        <div class="package-features">
+                            <span>✓ خدمة فاخرة</span>
+                            <span>✓ إطلالة رائعة</span>
+                            <span>✓ تجربة فريدة</span>
+                        </div>
+                        <div class="package-footer">
+                            <div class="package-price">
+                                <span class="price">6,500 ريال</span>
+                                <span class="per">ريال</span>
+                            </div>
+                            <button class="book-btn">احجز الآن</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="images/15.jfif" alt="باقة 7">
+                    </div>
+                    <div class="package-content">
+                        <h3>غرفة برنامج - شاملة</h3>
+                        <p class="package-location">📍 مكة والمدينة</p>
+                        <p class="package-description">برنامج 12 يوم - غرفة خاصة + مواصلات</p>
+                        <div class="package-features">
+                            <span> ✓ غرف فاخرة</span>
+                            <span>✓ تجربة فريدة</span>
+                            <span>✓ تجربة فريدة</span>
+                        </div>
+                        <div class="package-footer">
+                            <div class="package-price">
+                                <span class="price">8,900 ريال</span>
+                                <span class="per">ريال</span>
+                            </div>
+                            <button class="book-btn">احجز الآن</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="images/16.jfif" alt="باقة 8">
+                        <span class="package-badge">ريال</span>
+                    </div>
+                    <div class="package-content">
+                        <h3>غرفة برنامج - شاملة</h3>
+                        <p class="package-location">📍 مكة والمدينة</p>
+                        <p class="package-description">برنامج 15 يوم - غرفة خاصة + مواصلات</p>
+                        <div class="package-features">
+                            <span>✓ خدمة جيدة ريال</span>
+                            <span>✓ جميع الوجبات</span>
+                            <span>✓ تجربة لا تنسى</span>
+                        </div>
+                        <div class="package-footer">
+                            <div class="package-price">
+                                <span class="price">13,800 ريال</span>
+                                <span class="per">ريال</span>
+                            </div>
+                            <button class="book-btn">احجز الآن</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: ريال ✓ تجربة فريدةعرض خاص -->
+    <section class="packages" id="makkah-hotel">
+        <div class="container">
+            <h2 class="section-title" data-translate="sectionMakkah">باقات سكن فندقي للمعتمرين بمكة المكرمة</h2>
+            <div class="packages-grid">
+                <!-- 8 Packages for Section 3 -->
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="images/17.jfif" alt="مكة 1">
+                    </div>
+                    <div class="package-content">
+                        <h3>سكن فندقي - سرير فاخر</h3>
+                        <p class="package-location">📍 مكة المكرمة - 500م من الحرم</p>
+                        <p class="package-description">سرير في غرفة مشتركة - 7 أيام</p>
+                        <div class="package-features">
+                            <span>✓ تجربة فريدة</span>
+                            <span>✓ قريب من الحرم</span>
+                            <span>✓ تجربة فريدة</span>
+                        </div>
+                        <div class="package-footer">
+                            <div class="package-price">
+                                <span class="price">800 ريال</span>
+                                <span class="per">ريال</span>
+                            </div>
+                            <button class="book-btn">احجز الآن</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="images/18.jfif" alt="مكة 2">
+                        <span class="package-badge">عرض خاص</span>
+                    </div>
+                    <div class="package-content">
+                        <h3>سكن فندقي - سرير فاخر</h3>
+                        <p class="package-location">📍 مكة المكرمة - 200م من الحرم</p>
+                        <p class="package-description">سرير في غرفة مشتركة - 7 أيام</p>
+                        <div class="package-features">
+                            <span>✓ إطلالة رائعة</span>
+                            <span> ✓ قريب من الحرم</span>
+                            <span>✓ خدمة فاخرة</span>
+                        </div>
+                        <div class="package-footer">
+                            <div class="package-price">
+                                <span class="price">1,400 ريال</span>
+                                <span class="per">ريال</span>
+                            </div>
+                            <button class="book-btn">احجز الآن</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="images/19.jfif" alt="مكة 3">
+                    </div>
+                    <div class="package-content">
+                        <h3>سكن فندقي - سرير VIP</h3>
+                        <p class="package-location">📍 مكة المكرمة - إطلالة على الحرم</p>
+                        <p class="package-description">سرير في غرفة مشتركة - 10 أيام</p>
+                        <div class="package-features">
+                            <span>✓ جميع الوجبات</span>
+                            <span>✓ إطلالة رائعة</span>
+                            <span>✓ خدمة 24 ساعة</span>
+                        </div>
+                        <div class="package-footer">
+                            <div class="package-price">
+                                <span class="price">2,100 ريال</span>
+                                <span class="per">ريال</span>
+                            </div>
+                            <button class="book-btn">احجز الآن</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="images/20.jfif" alt="مكة 4">
+                        <span class="package-badge">5 ريال</span>
+                    </div>
+                    <div class="package-content">
+                        <h3>سكن فندقي - سرير فاخر</h3>
+                        <p class="package-location">📍 مكة المكرمة - فندق 5 نجوم</p>
+                        <p class="package-description">سرير في غرفة مشتركة - 14 يوم</p>
+                        <div class="package-features">
+                            <span>✓ خدمة فاخرة</span>
+                            <span>✓ تجربة فريدة</span>
+                            <span>✓ خدمة جيدة</span>
+                        </div>
+                        <div class="package-footer">
+                            <div class="package-price">
+                                <span class="price">3,200 ريال</span>
+                                <span class="per">ريال</span>
+                            </div>
+                            <button class="book-btn">احجز الآن</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="images/21.jfif" alt="مكة 5">
+                    </div>
+                    <div class="package-content">
+                        <h3>سكن فندقي - سرير اقتصادي</h3>
+                        <p class="package-location">📍 مكة المكرمة - 400م من الحرم</p>
+                        <p class="package-description">غرفة خاصة - 7 أيام</p>
+                        <div class="package-features">
+                            <span>✓ خدمة فاخرة</span>
+                            <span>✓ تجربة فريدة</span>
+                            <span>✓ موقع جيد</span>
+                        </div>
+                        <div class="package-footer">
+                            <div class="package-price">
+                                <span class="price">2,800 ريال</span>
+                                <span class="per">ريال</span>
+                            </div>
+                            <button class="book-btn">احجز الآن</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="images/22.jfif" alt="مكة 6">
+                        <span class="package-badge">ريال</span>
+                    </div>
+                    <div class="package-content">
+                        <h3>سكن فندقي - سرير فاخر</h3>
+                        <p class="package-location">📍 مكة المكرمة - 150م من الحرم</p>
+                        <p class="package-description">غرفة خاصة - 7 أيام</p>
+                        <div class="package-features">
+                            <span>✓ خدمة فاخرة</span>
+                            <span>✓ إطلالة رائعة</span>
+                            <span>✓ خدمة جيدة</span>
+                        </div>
+                        <div class="package-footer">
+                            <div class="package-price">
+                                <span class="price">4,500 ريال</span>
+                                <span class="per">ريال</span>
+                            </div>
+                            <button class="book-btn">احجز الآن</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="images/23.jfif" alt="مكة 7">
+                    </div>
+                    <div class="package-content">
+                        <h3>سكن فندقي - سرير فاخر</h3>
+                        <p class="package-location">📍 مكة المكرمة - إطلالة على الحرم</p>
+                        <p class="package-description">غرفة خاصة - 10 أيام</p>
+                        <div class="package-features">
+                            <span>✓ خدمة جيدة</span>
+                            <span>✓ جميع الوجبات</span>
+                            <span>✓ إطلالة رائعة</span>
+                        </div>
+                        <div class="package-footer">
+                            <div class="package-price">
+                                <span class="price">7,500 ريال</span>
+                                <span class="per">ريال</span>
+                            </div>
+                            <button class="book-btn">احجز الآن</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="images/24.jfif" alt="مكة 8">
+                        <span class="package-badge">ريال</span>
+                    </div>
+                    <div class="package-content">
+                        <h3>سكن فندقي - سرير فاخر</h3>
+                        <p class="package-location">📍 مكة المكرمة - أبراج فاخرة</p>
+                        <p class="package-description">غرفة خاصة - 14 يوم</p>
+                        <div class="package-features">
+                            <span>✓ خدمة جيدة</span>
+                            <span>✓ خدمة VIP</span>
+                            <span>✓ تجربة فريدة</span>
+                        </div>
+                        <div class="package-footer">
+                            <div class="package-price">
+                                <span class="price">14,000 ريال</span>
+                                <span class="per">ريال</span>
+                            </div>
+                            <button class="book-btn">احجز الآن</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: ريال✓ تجربة فريدةعرض خاص -->
+    <section class="packages" id="madinah">
+        <div class="container">
+            <h2 class="section-title" data-translate="sectionMadinah">باقات السكن بالمدينة المنورة للزوار</h2>
+            <div class="packages-grid">
+                <!-- 8 Packages for Section 4 -->
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="images/25.jfif" alt="ريال 1">
+                    </div>
+                    <div class="package-content">
+                        <h3>سكن المدينة - سرير فاخر</h3>
+                        <p class="package-location">📍 المدينة المنورة - 600م من المسجد النبوي</p>
+                        <p class="package-description">سرير في غرفة مشتركة - 5 أيام</p>
+                        <div class="package-features">
+                            <span>✓ تجربة فريدة</span>
+                            <span>✓ قريب من الحرم</span>
+                            <span>✓ تجربة فريدة</span>
+                        </div>
+                        <div class="package-footer">
+                            <div class="package-price">
+                                <span class="price">600 ريال</span>
+                                <span class="per">ريال</span>
+                            </div>
+                            <button class="book-btn">احجز الآن</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="images/26.jfif" alt="ريال 2">
+                        <span class="package-badge">ريال</span>
+                    </div>
+                    <div class="package-content">
+                        <h3>سكن المدينة - سرير فاخر</h3>
+                        <p class="package-location">📍 المدينة المنورة - 300م من المسجد النبوي</p>
+                        <p class="package-description">سرير في غرفة مشتركة - 5 أيام</p>
+                        <div class="package-features">
+                            <span>✓ إطلالة رائعة</span>
+                            <span>✓ خدمة فاخرة</span>
+                            <span>✓ خدمة جيدة</span>
+                        </div>
+                        <div class="package-footer">
+                            <div class="package-price">
+                                <span class="price">950 ريال</span>
+                                <span class="per">ريال</span>
+                            </div>
+                            <button class="book-btn">احجز الآن</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="images/27.jfif" alt="ريال 3">
+                    </div>
+                    <div class="package-content">
+                        <h3>سكن المدينة - سرير VIP</h3>
+                        <p class="package-location">📍 المدينة المنورة - إطلالة على الحرم</p>
+                        <p class="package-description">سرير في غرفة مشتركة - 7 أيام</p>
+                        <div class="package-features">
+                            <span>✓ جميع الوجبات</span>
+                            <span>✓ إطلالة رائعة</span>
+                            <span>✓ خدمة 24 ساعة</span>
+                        </div>
+                        <div class="package-footer">
+                            <div class="package-price">
+                                <span class="price">1,500 ريال</span>
+                                <span class="per">ريال</span>
+                            </div>
+                            <button class="book-btn">احجز الآن</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="images/28.jfif" alt="ريال 4">
+                        <span class="package-badge">ريال</span>
+                    </div>
+                    <div class="package-content">
+                        <h3>سكن المدينة - سرير فاخر</h3>
+                        <p class="package-location">📍 المدينة المنورة - فندق 5 نجوم</p>
+                        <p class="package-description">سرير في غرفة مشتركة - 10 أيام</p>
+                        <div class="package-features">
+                            <span>✓ خدمة فاخرة</span>
+                            <span>✓ تجربة فريدة</span>
+                            <span>✓ جميع الوجبات</span>
+                        </div>
+                        <div class="package-footer">
+                            <div class="package-price">
+                                <span class="price">2,400 ريال</span>
+                                <span class="per">ريال</span>
+                            </div>
+                            <button class="book-btn">احجز الآن</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="images/29.jfif" alt="ريال 5">
+                    </div>
+                    <div class="package-content">
+                        <h3>سكن المدينة - سرير اقتصادي</h3>
+                        <p class="package-location">📍 المدينة المنورة - 500م من الحرم</p>
+                        <p class="package-description">غرفة خاصة - 5 أيام</p>
+                        <div class="package-features">
+                            <span>✓ خدمة فاخرة</span>
+                            <span>✓ تجربة فريدة</span>
+                            <span>✓ موقع جيد</span>
+                        </div>
+                        <div class="package-footer">
+                            <div class="package-price">
+                                <span class="price">2,000 ريال</span>
+                                <span class="per">ريال</span>
+                            </div>
+                            <button class="book-btn">احجز الآن</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="images/30.jfif" alt="ريال 6">
+                        <span class="package-badge">ريال</span>
+                    </div>
+                    <div class="package-content">
+                        <h3>سكن المدينة - سرير فاخر</h3>
+                        <p class="package-location">📍 المدينة المنورة - 200م من الحرم</p>
+                        <p class="package-description">غرفة خاصة - 5 أيام</p>
+                        <div class="package-features">
+                            <span>✓ خدمة فاخرة</span>
+                            <span>✓ إطلالة رائعة</span>
+                            <span>✓ خدمة جيدة</span>
+                        </div>
+                        <div class="package-footer">
+                            <div class="package-price">
+                                <span class="price">3,200 ريال</span>
+                                <span class="per">ريال</span>
+                            </div>
+                            <button class="book-btn">احجز الآن</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="images/1.jfif" alt="مدينة 7">
+                    </div>
+                    <div class="package-content">
+                        <h3>سكن المدينة - سرير فاخر</h3>
+                        <p class="package-location">📍 المدينة المنورة - إطلالة على الحرم</p>
+                        <p class="package-description">غرفة خاصة - 7 أيام</p>
+                        <div class="package-features">
+                            <span>✓ خدمة جيدة</span>
+                            <span>✓ جميع الوجبات</span>
+                            <span>✓ إطلالة رائعة</span>
+                        </div>
+                        <div class="package-footer">
+                            <div class="package-price">
+                                <span class="price">5,500 ريال</span>
+                                <span class="per">ريال</span>
+                            </div>
+                            <button class="book-btn">احجز الآن</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="images/2.jfif" alt="مدينة 8">
+                        <span class="package-badge">ريال</span>
+                    </div>
+                    <div class="package-content">
+                        <h3>سكن المدينة - سرير فاخر</h3>
+                        <p class="package-location">📍 المدينة المنورة - أبراج فاخرة</p>
+                        <p class="package-description">غرفة خاصة - 10 أيام</p>
+                        <div class="package-features">
+                            <span>✓ خدمة جيدة</span>
+                            <span>✓ خدمة VIP</span>
+                            <span>✓ تجربة فريدةريال</span>
+                        </div>
+                        <div class="package-footer">
+                            <div class="package-price">
+                                <span class="price">9,800 ريال</span>
+                                <span class="per">ريال</span>
+                            </div>
+                            <button class="book-btn">احجز الآن</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p><span data-translate="footerText">&copy; 2026 باقات السكن - مكة والمدينة - جميع الحقوق محفوظة</span></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
